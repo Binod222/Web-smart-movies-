@@ -87,6 +87,8 @@ const CreateMovie = () => {
         formData.append("image", selectedImage);
 
         const uploadImageResponse = await uploadImage(formData);
+        console.log( "data ", uploadImageResponse);
+        
 
         if (uploadImageResponse.data) {
           uploadedImagePath = uploadImageResponse.data.image;
